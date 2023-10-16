@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+.body{
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.App{
+  display: grid;
+  grid-template-columns: 260px 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 3fr;
+  grid-template-areas: 
+  'sidebar header header header'
+  'sidebar main main main';
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icon{
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon_header{
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 26px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.icon, .icon_header{
+  margin-right: 5px;
+}
+.header{
+  grid-area: header;
   display: flex;
-  flex-direction: column;
+  height: 60px;
+  align-items: flex-end;
+  justify-content:right ;
+  padding: 0 30px 0 30px;
+}
+.main-icon{
+  display: none;
+}
+#sidebar{
+  grid-area: sidebar;
+  height: 100%;
+  color: white ;
+  background-color: rgb(49, 49, 128);
+  overflow-y: auto;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+.s-title{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 30px;
+  padding: 15px 30px 0 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.s-title > span{
+  display: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.s-icon{
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.s-li{
+  padding: 0;
+  list-style-type: none;
+}
+.s-li-items{
+  font-size: 18px;
+  padding: 20px 20px 20px 20px;
+}
+.s-li-items:hover{
+  background-color: rgb(49, 49, 128);
+  cursor: pointer;
+}
+.s-li-items > a {
+  text-decoration: none;
+  color: white 
+}
+.sidebar-responsive{
+  display: inline !important;
+  position: absolute;
+  z-index: 12 !important;
 }
