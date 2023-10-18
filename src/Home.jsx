@@ -5,10 +5,11 @@ import {PiHandbagFill,PiHandWavingDuotone} from 'react-icons/pi';
 import {BsArrowUpShort,BsArrowDownShort} from 'react-icons/bs';
 import BarChart from './Barchart';
 import PieChart from './Piechart';
+import Tables from './Table';
 
 function Home() {
   return (
-    <div className='container'>
+    <main className='container'>
         <div className='container-title'>
             <h4>Hello Shahrukh<PiHandWavingDuotone className='hand-icon'/>,</h4>
         </div>
@@ -57,8 +58,9 @@ function Home() {
         <div className='charts'>
             <BarChart/>
             <PieChart/>
+            <Tables/>
         </div>
-    </div>
+    </main>
   )
 }
 

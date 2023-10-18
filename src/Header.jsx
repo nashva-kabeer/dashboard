@@ -8,7 +8,7 @@ function Header() {
             <BsJustify className='icon'/>
         </div>
         <div className='headers-right'>
-            <BsSearch className='icon'/>
+            <BsSearch className='icon'/><input type='text' placeholder='Search'/>
         </div>
     </header>
   )
